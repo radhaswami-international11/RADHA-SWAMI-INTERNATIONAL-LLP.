@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radha Swami International LLP.</title>
+  <link rel="icon" type="image/png" href="https://i.ibb.co/SDsv3gMJ/new-logo-1.png"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #fdfcf7;
+      color: #333;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    header {
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+    }
+    header h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    nav ul li a:hover {
+      color: #ffd65c;
+    }
+    section {
+      padding: 100px 50px;
+    }
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://plus.unsplash.com/premium_photo-1661823013705-d58ac4788630?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2hlYXQlMjBmYXJtfGVufDB8fDB8fHww') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 20px;
+     
+    }
+    .hero .btn-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .btn {
+      background: #ffd65c;
+      color: #000;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #ffb600;
+    }
+    /* About Us */
+    .about {
+      background: #fffaf0;
+    }
+    .about h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .about p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: center;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    /* Specials */
+    .specials {
+      background: url('https://sourcetrace.com/wp-content/uploads/2017/02/cereals.jpg') center/cover fixed no-repeat;
+      color: #fff;
+      text-align: center;
+    }
+    .specials h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+    .special-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .special-card {
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .special-card h4 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    .special-card p {
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    /* Shop Section */
+    .shop {
+      text-align: center;
+    }
+    .shop h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+    .card-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 10px;
+    }
+    .product-card {
+      min-width: 250px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      flex-shrink: 0;
+      text-align: center;
+      padding: 15px;
+    }
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .product-card h4 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+    .see-more {
+      margin-top: 20px;
+    }
+    /* Contact Section */
+    .contact {
+      background: #fffaf0;
+      text-align: center;
+    }
+    .contact h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .contact p {
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .icons a {
+      font-size: 32px;
+      margin: 10px;
+      color: #000;
+      transition: 0.3s;
+    }
+    .icons a:hover {
+      color: #ffb600;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    footer ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+    footer ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    footer ul li a:hover {
+      color: #ffd65c;
+    }
+    @media(max-width:768px){
+      header {
+        flex-direction: column;
+        padding: 10px;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    /* ...existing code... */
+.whatsapp-sticky {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 30px;
+  width: 180px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 2000;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+  gap: 16px;
+  padding: 0 24px;
+}
+.whatsapp-sticky:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  background: #1ebe57;
+}
+.whatsapp-sticky span {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RADHA SWAMI INTERNATIONAL LLP. </h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#specials">Specials</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+<img src="https://i.ibb.co/SDsv3gMJ/new-logo-1.png" alt="new-logo-1" border="0" style="width: 21rem; height: 21rem;">
+    <h2>Pure Spices & Grains</h2>
+    <p>Bringing Nature's Goodness to Every Kitchen</p>
+    <div class="btn-group">
+      <a href="#shop" class="btn">Shop Now</a>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about" id="about">
+  <h3>About Us</h3>
+  <p>
+    RADHA SWAMI INTERNATIONAL LLP, along with our sister concern <strong>Jai Bhole Trading Company</strong>, is dedicated to delivering agriculture products to the global market.<br><br>
+    We source our products directly from trusted farmers, ensuring freshness and authentic products.<br><br>
+    Each product undergoes careful sorting and grading before reaching the market.<br><br>
+    With over 10 years of experience through Jai Bhole Trading Company, we have built a strong reputation for reliability, integrity, and customer satisfaction.
+  </p>
+</section>
+
+  <!-- Specials Section -->
+  <section class="specials" id="specials">
+    <h3>Our Specials</h3>
+    <div class="special-grid">
+      <div class="special-card">
+        <h4>100% Natural</h4>
+        <p>Pure, handpicked ingredients with no artificial additives.</p>
+      </div>
+      <div class="special-card">
+        <h4>Farm Fresh</h4>
+        <p>Sourced directly from trusted farms to your kitchen.</p>
+      </div>
+      <div class="special-card">
+        <h4>Rich Aroma</h4>
+        <p>Experience the authentic flavors of traditional Indian spices.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section class="shop" id="shop">
+    <h3>Shop Our Products</h3>
+    <div class="card-slider">
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/41OTD8MqWpL._UF1000,1000_QL80_.jpg" alt="">
+        <h4> <span style="font-size: 9px;">42/5/0 </span><br>Black Mustard</h4>
+        <p>XXXX</p>
+      </div>
+      <div class="product-card">
+        <img src="https://3.imimg.com/data3/SF/VQ/MY-14921068/bajra-cattle-feed-500x500.jpg" alt="">
+        <h4> <span style="font-size: 9px;">Animal Grade </span><br>Bajra</h4>
+        <p>XXXX</p>
+      </div>
+      <div class="product-card">
+        <img src="https://www.shutterstock.com/image-photo/brown-indian-kala-chana-chickpeas-600nw-2226242051.jpg" alt="">
+        <h4><p class="iran" style="font-size: 9px;">Iranian Qual</p> Desi Chickpea</h4>
+        <p>XXXX</p>
+      </div>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/712q4iHb-9L._UF894,1000_QL80_.jpg" alt="">
+        <h4><span style="font-size: 9px;">Europe Qual</span> <br>Cumin Seeds</h4>
+        <p>XXXX</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.pinimg.com/1200x/28/fd/8a/28fd8a49ad69c53afc1097b89d058965.jpg" alt="">
+        <h4> <span style="font-size: 9px;">Own Brand</span> <br>Mustard oil</h4>
+        <p>XXXX</p>
+      </div>
+            <div class="product-card">
+        <img src="https://i.pinimg.com/1200x/3c/f6/98/3cf698004270ca09997006550eb2e5d3.jpg" alt="Flex">
+          <h4> <span style="font-size: 9px;">Own Brand</span> <br>Flex Oil</h4>
+        <p>XXXX</p>
+      </div>
+    </div>
+    <div class="see-more">
+      <a href="./products.html" class="btn">See More</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h3>Contact Us</h3>
+    <p>We'd love to hear from you. Get in touch anytime!</p>
+    <div class="icons">
+      <a href="mailto:info@jaibhole.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://wa.me/916350027122" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </section>
+
+  <!-- Sticky WhatsApp Button -->
+  <a href="https://wa.me/916350027122" target="_blank" class="whatsapp-sticky" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp " ></i><p style="font-size: large;">WhatsApp</p> 
+  </a>
+
+
+  <!-- Footer -->
+  <footer>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#specials">Specials</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p>&copy; 2025 RADHA SWAMI INTERNATIONAL LLP. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Optional: Auto scroll slider effect (basic)
+    const slider = document.querySelector('.card-slider');
+    let scrollAmount = 0;
+    setInterval(()=>{
+      slider.scrollBy({left: 270, behavior: 'smooth'});
+      scrollAmount += 270;
+      if(scrollAmount >= slider.scrollWidth - slider.clientWidth){
+        slider.scrollTo({left:0, behavior:'smooth'});
+        scrollAmount = 0;
+      }
+    }, 3000);
+  </script>
+</body>
+</html>
